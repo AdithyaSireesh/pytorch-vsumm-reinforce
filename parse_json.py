@@ -23,7 +23,7 @@ args = parser.parse_args()
 reward_writers = read_json(args.path)
 keys = reward_writers.keys()
 assert args.idx < len(keys)
-key = keys[args.idx]
+key = list(keys)[args.idx]
 rewards = reward_writers[key]
 
 plt.plot(rewards)
